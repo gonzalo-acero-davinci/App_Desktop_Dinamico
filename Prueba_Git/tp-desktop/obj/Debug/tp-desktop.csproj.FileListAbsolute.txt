@@ -1,0 +1,12 @@
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\bin\Debug\tp-desktop.exe.config
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\bin\Debug\tp-desktop.exe
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\bin\Debug\tp-desktop.pdb
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.csproj.AssemblyReference.cache
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.csproj.SuggestedBindingRedirects.cache
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp_desktop.Form1.resources
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp_desktop.Properties.Resources.resources
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.csproj.GenerateResource.cache
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.csproj.CoreCompileInputs.cache
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.exe
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp-desktop.pdb
+D:\Facultad_Gonzalo_v2\Plataformas_Desarrrollo_Git\tp---app-desktop-gonzalo-acero-davinci\tp-desktop\obj\Debug\tp_desktop.Form2.resources
