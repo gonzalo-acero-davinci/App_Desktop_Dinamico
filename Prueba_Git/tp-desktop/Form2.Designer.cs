@@ -33,6 +33,7 @@
             this.Usuario = new System.Windows.Forms.Label();
             this.Contraseña = new System.Windows.Forms.Label();
             this.ingresar = new System.Windows.Forms.Button();
+            this.Conexion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxContraseña
@@ -69,7 +70,7 @@
             // 
             // ingresar
             // 
-            this.ingresar.Location = new System.Drawing.Point(126, 393);
+            this.ingresar.Location = new System.Drawing.Point(126, 429);
             this.ingresar.Name = "ingresar";
             this.ingresar.Size = new System.Drawing.Size(75, 23);
             this.ingresar.TabIndex = 4;
@@ -77,11 +78,22 @@
             this.ingresar.UseVisualStyleBackColor = true;
             this.ingresar.Click += new System.EventHandler(this.ingresar_Click);
             // 
+            // Conexion
+            // 
+            this.Conexion.Location = new System.Drawing.Point(126, 369);
+            this.Conexion.Name = "Conexion";
+            this.Conexion.Size = new System.Drawing.Size(75, 23);
+            this.Conexion.TabIndex = 5;
+            this.Conexion.Text = "Conectar";
+            this.Conexion.UseVisualStyleBackColor = true;
+            this.Conexion.Click += new System.EventHandler(this.Conexion_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 506);
+            this.Controls.Add(this.Conexion);
             this.Controls.Add(this.ingresar);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Usuario);
@@ -101,5 +113,6 @@
         private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.Label Contraseña;
         private System.Windows.Forms.Button ingresar;
+        private System.Windows.Forms.Button Conexion;
     }
 }

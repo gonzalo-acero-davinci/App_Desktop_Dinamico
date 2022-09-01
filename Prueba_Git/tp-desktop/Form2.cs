@@ -47,5 +47,11 @@ namespace tp_desktop
             Form1 form1 = new Form1();
             form1.Show();*/
         }
+
+        private void Conexion_Click(object sender, EventArgs e)
+        {
+            conexionABbdd connectionobject = new conexionABbdd();
+            connectionobject.establishConnection();
+        }
     }
 }
