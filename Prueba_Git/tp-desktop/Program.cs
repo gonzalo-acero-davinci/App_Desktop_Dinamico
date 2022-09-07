@@ -23,6 +23,11 @@ namespace tp_desktop
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(form2 = new Form2());
             //Application.Run(form1 = new Form1());
+
+            string clientId = "793072394942-5iv7b3vh0s449e97d5kl5lb47ld5lvbe.apps.googleusercontent.com";
+            string clientSecret = "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";
+
+            
         }
     }
 }
