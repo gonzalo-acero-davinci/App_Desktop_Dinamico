@@ -1,8 +1,17 @@
-﻿using System;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Gmail.v1;
+using Google.Apis.Services;
+using Google.Apis.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
+using System.Net;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace tp_desktop
 {
@@ -12,40 +21,49 @@ namespace tp_desktop
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         public static Form1 form1;
-        public static Form2 form2;
+        public static Form2 form3;
         [STAThread]
         
+
+
         static void Main()
         {
             
             //Program.form1.Hide();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form2 = new Form2());
+            Application.Run(form3 = new Form2());
             //Application.Run(form1 = new Form1());
 
-            string clientId = "793072394942-5iv7b3vh0s449e97d5kl5lb47ld5lvbe.apps.googleusercontent.com";
-            string clientSecret = "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";
             
-            string[] scopes = {"https://www.googleapis.com/aupht/gmail.readonly"};
-            var credentials !UserCredential = GoogleWebauthorizationBroker.AuthorizeAsync(
+            string[] scopes = { "https://www.googleapis.com/auth/gmail.readonly" };
+            var credentials = GoogleWebAuthorizationBroker.AuthorizeAsync(
                 new ClientSecrets
                 {
-                    clientId = clientId,
-                    clientSecret = clientSecret,
+                    ClientId = clientId,
+                    ClientSecret = clientSecret,
                 }, 
-                scopes, "User", CancellationToken.none).result;
+                scopes, "user", CancellationToken.None).Result;
 
-            if (credentials.Token.IsExpired(SystemClock.default))
-                credentials.RefreshTokenAsync(Cancellationtoken.None).Wait();
+            if (credentials.Token.IsExpired(SystemClock.Default))
+                credentials.RefreshTokenAsync(CancellationToken.None).Wait();
 
             var service = new GmailService(new BaseClientService.Initializer()
             {
-                httpClientInitializer = credentials
+                HttpClientInitializer = credentials
             });
 
-            var profile = service.Users.GerProfile("gonzalo.Acero@davinci.edu.ar").Execute();
+            var profile = service.Users.GetProfile("gonzalo.acero@davinci.edu.ar").Execute();
+            Console.WriteLine(profile.MessagesTotal);
             Console.ReadLine();
+            
+
         }
+
+        const string clientId = "";
+        const string clientSecret = "";
+        
+
+
     }
 }

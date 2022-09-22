@@ -8,34 +8,38 @@ using System.Windows.Forms;
 
 namespace tp_desktop
 {
-    
+
 
     class conexionABbdd
     {
-        MySqlConnection conexion = new MySqlConnection();
+        public static MySqlConnection getConnection() {
+            
 
-        static string server = "localhost";
-        static string bd = "users";
-        static string userbd = "root";
-        static string passwordbd = "root";
-        static string port = "3306";
+             string server = "localhost";
+             string bd = "users";
+             string userbd = "root";
+             string passwordbd = "root";
+             string port = "3306";
 
-        string connectionChain = "server=" + server + ";" + "port=" + port + ";" + "password=" + passwordbd + ";" + "database=" + bd + ";" + "user=" + userbd + ";";
+            string connectionChain = "server=" + server + ";" + "port=" + port + ";" + "password=" + passwordbd + ";" + "database=" + bd + ";" + "user=" + userbd + ";";
+            MySqlConnection conexion = new MySqlConnection(connectionChain);
+            return conexion;
 
-        public MySqlConnection establishConnection() 
-        {
-            try
+            /*public MySqlConnection establishConnection() 
             {
-                conexion.ConnectionString = connectionChain;
-                conexion.Open();
-                MessageBox.Show("Conectado correctamente");
-            }
-            catch (MySqlException e) 
-            {
-                MessageBox.Show("No se pudo conectar a bbdd" + e.ToString());
-            }
+                try
+                {
+                    conexion.ConnectionString = connectionChain;
+                    conexion.Open();
+                    MessageBox.Show("Conectado correctamente");
+                }
+                catch (MySqlException e) 
+                {
+                    MessageBox.Show("No se pudo conectar a bbdd" + e.ToString());
+                }
 
-            return conexion;    
+                return conexion;    
+            }*/
         }
     }
 }

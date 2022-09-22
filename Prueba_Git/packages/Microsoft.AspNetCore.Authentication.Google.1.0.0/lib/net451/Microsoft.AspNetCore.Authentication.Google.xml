@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Authentication.Google</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNetCore.Builder.GoogleAppBuilderExtensions">
+            <summary>
+            Extension methods to add Google authentication capabilities to an HTTP application pipeline.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.GoogleAppBuilderExtensions.UseGoogleAuthentication(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds the <see cref="T:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware"/> middleware to the specified <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/>, which enables Google authentication capabilities.
+            </summary>
+            <param name="app">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> to add the middleware to.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.GoogleAppBuilderExtensions.UseGoogleAuthentication(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Builder.GoogleOptions)">
+            <summary>
+            Adds the <see cref="T:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware"/> middleware to the specified <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/>, which enables Google authentication capabilities.
+            </summary>
+            <param name="app">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> to add the middleware to.</param>
+            <param name="options">A <see cref="T:Microsoft.AspNetCore.Builder.GoogleOptions"/> that specifies options for the middleware.</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.GoogleOptions">
+            <summary>
+            Configuration options for <see cref="T:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.GoogleOptions.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Microsoft.AspNetCore.Builder.GoogleOptions"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Builder.GoogleOptions.AccessType">
+            <summary>
+            access_type. Set to 'offline' to request a refresh token.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Authentication.Google.GoogleHelper">
+            <summary>
+            Contains static methods that allow to extract user's information from a <see cref="T:Newtonsoft.Json.Linq.JObject"/>
+            instance retrieved from Google after a successful authentication process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetId(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the Google user ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetName(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the user's name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetGivenName(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the user's given name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetFamilyName(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the user's family name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetProfile(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the user's profile link.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleHelper.GetEmail(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the user's email.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware">
+            <summary>
+            An ASP.NET Core middleware for authenticating users using Google OAuth 2.0.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.DataProtection.IDataProtectionProvider,Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Authentication.SharedAuthenticationOptions},Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Builder.GoogleOptions})">
+            <summary>
+            Initializes a new <see cref="T:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware"/>.
+            </summary>
+            <param name="next">The next middleware in the HTTP pipeline to invoke.</param>
+            <param name="dataProtectionProvider"></param>
+            <param name="loggerFactory"></param>
+            <param name="encoder"></param>
+            <param name="sharedOptions"></param>
+            <param name="options">Configuration options for the middleware.</param>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.GoogleMiddleware.CreateHandler">
+            <summary>
+            Provides the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationHandler`1"/> object for processing authentication-related requests.
+            </summary>
+            <returns>An <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationHandler`1"/> configured with the <see cref="T:Microsoft.AspNetCore.Builder.GoogleOptions"/> supplied to the constructor.</returns>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Authentication.Google.Resources.Exception_OptionMustBeProvided">
+            <summary>
+            The '{0}' option must be provided.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.Resources.FormatException_OptionMustBeProvided(System.Object)">
+            <summary>
+            The '{0}' option must be provided.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Authentication.Google.Resources.Exception_ValidatorHandlerMismatch">
+            <summary>
+            An ICertificateValidator cannot be specified at the same time as an HttpMessageHandler unless it is a WebRequestHandler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authentication.Google.Resources.FormatException_ValidatorHandlerMismatch">
+            <summary>
+            An ICertificateValidator cannot be specified at the same time as an HttpMessageHandler unless it is a WebRequestHandler.
+            </summary>
+        </member>
+    </members>
+</doc>

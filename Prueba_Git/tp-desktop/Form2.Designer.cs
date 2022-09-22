@@ -33,7 +33,8 @@
             this.Usuario = new System.Windows.Forms.Label();
             this.Contraseña = new System.Windows.Forms.Label();
             this.ingresar = new System.Windows.Forms.Button();
-            this.Conexion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Google = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxContraseña
@@ -70,7 +71,7 @@
             // 
             // ingresar
             // 
-            this.ingresar.Location = new System.Drawing.Point(126, 429);
+            this.ingresar.Location = new System.Drawing.Point(126, 382);
             this.ingresar.Name = "ingresar";
             this.ingresar.Size = new System.Drawing.Size(75, 23);
             this.ingresar.TabIndex = 4;
@@ -78,22 +79,33 @@
             this.ingresar.UseVisualStyleBackColor = true;
             this.ingresar.Click += new System.EventHandler(this.ingresar_Click);
             // 
-            // Conexion
+            // button1
             // 
-            this.Conexion.Location = new System.Drawing.Point(126, 369);
-            this.Conexion.Name = "Conexion";
-            this.Conexion.Size = new System.Drawing.Size(75, 23);
-            this.Conexion.TabIndex = 5;
-            this.Conexion.Text = "Conectar";
-            this.Conexion.UseVisualStyleBackColor = true;
-            this.Conexion.Click += new System.EventHandler(this.Conexion_Click);
+            this.button1.Location = new System.Drawing.Point(126, 471);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Registrarse";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Google
+            // 
+            this.Google.Location = new System.Drawing.Point(126, 423);
+            this.Google.Name = "Google";
+            this.Google.Size = new System.Drawing.Size(75, 23);
+            this.Google.TabIndex = 7;
+            this.Google.Text = "Google";
+            this.Google.UseVisualStyleBackColor = true;
+            this.Google.Click += new System.EventHandler(this.Google_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 506);
-            this.Controls.Add(this.Conexion);
+            this.Controls.Add(this.Google);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ingresar);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.Usuario);
@@ -113,6 +125,7 @@
         private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.Label Contraseña;
         private System.Windows.Forms.Button ingresar;
-        private System.Windows.Forms.Button Conexion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Google;
     }
 }
