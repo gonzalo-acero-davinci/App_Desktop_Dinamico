@@ -35,6 +35,12 @@ namespace tp_desktop
             Application.Run(form3 = new Form2());
             //Application.Run(form1 = new Form1());
 
+<<<<<<< HEAD
+=======
+            string clientId = "";
+            string clientSecret = "";
+
+>>>>>>> e30cbad4723a6aaed1a5bd147811fb345c4d0b28
             
             string[] scopes = { "https://www.googleapis.com/auth/gmail.readonly" };
             var credentials = GoogleWebAuthorizationBroker.AuthorizeAsync(
