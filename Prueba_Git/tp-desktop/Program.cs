@@ -21,7 +21,8 @@ namespace tp_desktop
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         public static Form1 form1;
-        public static Form2 form3;
+        public static Form2 form2;
+        public static Form3 form3;
         [STAThread]
         
 
@@ -32,15 +33,14 @@ namespace tp_desktop
             //Program.form1.Hide();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(form3 = new Form2());
+            Application.Run(form2 = new Form2());
             //Application.Run(form1 = new Form1());
 
-<<<<<<< HEAD
-=======
+
             string clientId = "";
             string clientSecret = "";
 
->>>>>>> e30cbad4723a6aaed1a5bd147811fb345c4d0b28
+
             
             string[] scopes = { "https://www.googleapis.com/auth/gmail.readonly" };
             var credentials = GoogleWebAuthorizationBroker.AuthorizeAsync(

@@ -26,6 +26,30 @@ namespace tp_desktop
             int resultado = comando.ExecuteNonQuery();
 
             return resultado;
+
+            
+        }
+        public bool userExists(string usuario) 
+        {
+            MySqlDataReader reader;
+            
+            MySqlConnection conexion = conexionABbdd.getConnection();
+            conexion.Open();
+
+            string sql = "SELECT ID from users WHERE Usuario LIKE @Usuario";
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@Usuario", usuario);
+
+            reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
         }
     }
 }

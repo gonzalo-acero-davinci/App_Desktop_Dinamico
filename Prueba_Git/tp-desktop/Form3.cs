@@ -19,9 +19,43 @@ namespace tp_desktop
 
         private void Volver_Click(object sender, EventArgs e)
         {
-            Program.form3.Hide();
+            Form3 form3 = new Form3();
+            form3.Hide();
             Form2 form2 = new Form2();
             form2.Show();
         }
-    }
-}
+
+        private void Register_Click(object sender, EventArgs e)
+        {
+            Users users = new Users();
+
+            users.Usuario1 = Usertext.Text;
+            users.Password1 = PassText.Text;
+            users.Email = MailText.Text;
+            users.DNI1 = DNIText.Text;
+            users.ConPassword = ConfirmPass.Text;
+
+
+            try {
+                Controller control = new Controller();
+                string respuesta = control.controllerRegister(users);
+
+                if (respuesta.Length > 0)
+                {
+                    MessageBox.Show(respuesta, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(respuesta, "Usuario Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+
+            } catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+            }
+    } }
+
+

@@ -33,11 +33,11 @@
             this.ConfirmPass = new System.Windows.Forms.Label();
             this.Mail = new System.Windows.Forms.Label();
             this.DNI = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Usertext = new System.Windows.Forms.TextBox();
+            this.PassText = new System.Windows.Forms.TextBox();
+            this.ConPassText = new System.Windows.Forms.TextBox();
+            this.MailText = new System.Windows.Forms.TextBox();
+            this.DNIText = new System.Windows.Forms.TextBox();
             this.Register = new System.Windows.Forms.Button();
             this.Volver = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,40 +87,40 @@
             this.DNI.TabIndex = 4;
             this.DNI.Text = "DNI";
             // 
-            // textBox1
+            // Usertext
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 5;
+            this.Usertext.Location = new System.Drawing.Point(156, 34);
+            this.Usertext.Name = "Usertext";
+            this.Usertext.Size = new System.Drawing.Size(153, 20);
+            this.Usertext.TabIndex = 5;
             // 
-            // textBox2
+            // PassText
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 6;
+            this.PassText.Location = new System.Drawing.Point(156, 89);
+            this.PassText.Name = "PassText";
+            this.PassText.Size = new System.Drawing.Size(153, 20);
+            this.PassText.TabIndex = 6;
             // 
-            // textBox3
+            // ConPassText
             // 
-            this.textBox3.Location = new System.Drawing.Point(156, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 7;
+            this.ConPassText.Location = new System.Drawing.Point(156, 137);
+            this.ConPassText.Name = "ConPassText";
+            this.ConPassText.Size = new System.Drawing.Size(153, 20);
+            this.ConPassText.TabIndex = 7;
             // 
-            // textBox4
+            // MailText
             // 
-            this.textBox4.Location = new System.Drawing.Point(156, 185);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 20);
-            this.textBox4.TabIndex = 8;
+            this.MailText.Location = new System.Drawing.Point(156, 185);
+            this.MailText.Name = "MailText";
+            this.MailText.Size = new System.Drawing.Size(153, 20);
+            this.MailText.TabIndex = 8;
             // 
-            // textBox5
+            // DNIText
             // 
-            this.textBox5.Location = new System.Drawing.Point(156, 234);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(153, 20);
-            this.textBox5.TabIndex = 9;
+            this.DNIText.Location = new System.Drawing.Point(156, 234);
+            this.DNIText.Name = "DNIText";
+            this.DNIText.Size = new System.Drawing.Size(153, 20);
+            this.DNIText.TabIndex = 9;
             // 
             // Register
             // 
@@ -130,6 +130,7 @@
             this.Register.TabIndex = 10;
             this.Register.Text = "Registrarse";
             this.Register.UseVisualStyleBackColor = true;
+            this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
             // Volver
             // 
@@ -148,11 +149,11 @@
             this.ClientSize = new System.Drawing.Size(387, 394);
             this.Controls.Add(this.Volver);
             this.Controls.Add(this.Register);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DNIText);
+            this.Controls.Add(this.MailText);
+            this.Controls.Add(this.ConPassText);
+            this.Controls.Add(this.PassText);
+            this.Controls.Add(this.Usertext);
             this.Controls.Add(this.DNI);
             this.Controls.Add(this.Mail);
             this.Controls.Add(this.ConfirmPass);
@@ -172,11 +173,11 @@
         private System.Windows.Forms.Label ConfirmPass;
         private System.Windows.Forms.Label Mail;
         private System.Windows.Forms.Label DNI;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Usertext;
+        private System.Windows.Forms.TextBox PassText;
+        private System.Windows.Forms.TextBox ConPassText;
+        private System.Windows.Forms.TextBox MailText;
+        private System.Windows.Forms.TextBox DNIText;
         private System.Windows.Forms.Button Register;
         private System.Windows.Forms.Button Volver;
     }

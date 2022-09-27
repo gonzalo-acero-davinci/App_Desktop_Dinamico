@@ -20,6 +20,7 @@ using System.Windows;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace tp_desktop
 {
@@ -38,7 +39,7 @@ namespace tp_desktop
 
             if (vusuario.validarInicioSesion(textBoxUsuario.Text, textBoxContraseña.Text) == true) 
             {
-                Program.form3.Hide();
+                Program.form2.Hide();
                 Form1 form1 = new Form1();
                 form1.Show();
 
@@ -83,7 +84,8 @@ namespace tp_desktop
         const string userInfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo";
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.form3.Hide();
+            Form2 form2 = new Form2();
+            Program.form2.Hide();
             Form3 form3 = new Form3();
             form3.Show();
         }
@@ -116,8 +118,8 @@ namespace tp_desktop
         private async void Google_Click(object sender, EventArgs e)
         {
             
-                // Generates state and PKCE values.
-                string state = randomDataBase64url(32);
+            // Generates state and PKCE values.
+            string state = randomDataBase64url(32);
                 string code_verifier = randomDataBase64url(32);
                 string code_challenge = base64urlencodeNoPadding(sha256(code_verifier));
                 const string code_challenge_method = "S256";
@@ -162,7 +164,12 @@ namespace tp_desktop
                     http.Stop();
                     Console.WriteLine("HTTP server stopped.");
                 });
+            Program.form2.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
 
-            }
+
         }
+      
+    }
 }

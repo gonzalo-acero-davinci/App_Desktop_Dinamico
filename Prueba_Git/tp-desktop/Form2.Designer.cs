@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.textBoxUsuario = new System.Windows.Forms.MaskedTextBox();
             this.Usuario = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             // 
             // ingresar
             // 
-            this.ingresar.Location = new System.Drawing.Point(126, 382);
+            this.ingresar.Location = new System.Drawing.Point(126, 344);
             this.ingresar.Name = "ingresar";
             this.ingresar.Size = new System.Drawing.Size(75, 23);
             this.ingresar.TabIndex = 4;
@@ -81,7 +82,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 471);
+            this.button1.Location = new System.Drawing.Point(126, 388);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -91,11 +92,11 @@
             // 
             // Google
             // 
-            this.Google.Location = new System.Drawing.Point(126, 423);
+            this.Google.Image = ((System.Drawing.Image)(resources.GetObject("Google.Image")));
+            this.Google.Location = new System.Drawing.Point(126, 426);
             this.Google.Name = "Google";
-            this.Google.Size = new System.Drawing.Size(75, 23);
+            this.Google.Size = new System.Drawing.Size(75, 53);
             this.Google.TabIndex = 7;
-            this.Google.Text = "Google";
             this.Google.UseVisualStyleBackColor = true;
             this.Google.Click += new System.EventHandler(this.Google_Click);
             // 
