@@ -33,7 +33,35 @@ namespace tp_desktop
 
         private void ingresar_Click(object sender, EventArgs e)
         {
-            ValidarUsuario vusuario = new ValidarUsuario();
+
+            string usuario = textBoxUsuario.Text;
+            string password = textBoxContraseña.Text;
+
+            try 
+            {
+                Controller ctrl = new Controller();
+                string respuesta = ctrl.controllerLogIn(usuario, password);
+                if (respuesta.Length > 0)
+                {
+                    MessageBox.Show(respuesta, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else 
+                {
+                    Program.form2.Hide();
+                    Form1 form1 = new Form1();
+                    form1.Show();
+                }
+
+
+            
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+           /* ValidarUsuario vusuario = new ValidarUsuario();
             vusuario.iniciarSesion(textBoxUsuario.Text, textBoxContraseña.Text);
             MessageBox.Show(vusuario.resultado);
 

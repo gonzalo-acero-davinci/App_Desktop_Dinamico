@@ -17,11 +17,11 @@ namespace tp_desktop
 
              string server = "localhost";
              string bd = "users";
-             string userbd = "root";
-             string passwordbd = "root";
+             string user = "root";
+             string password = "root";
              string port = "3306";
 
-            string connectionChain = "server=" + server + ";" + "port=" + port + ";" + "password=" + passwordbd + ";" + "database=" + bd + ";" + "user=" + userbd + ";";
+            string connectionChain = "server=" + server +  "; database=" + bd  + "; user=" + user + "; password=" + password + "; port=" + port ;
             MySqlConnection conexion = new MySqlConnection(connectionChain);
             return conexion;
 

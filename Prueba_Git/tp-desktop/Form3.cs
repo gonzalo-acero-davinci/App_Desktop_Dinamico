@@ -33,7 +33,7 @@ namespace tp_desktop
             users.Password1 = PassText.Text;
             users.Email = MailText.Text;
             users.DNI1 = DNIText.Text;
-            users.ConPassword = ConfirmPass.Text;
+            users.ConPassword = ConPassText.Text;
 
 
             try {
